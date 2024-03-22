@@ -14,6 +14,7 @@ def conexaoBanco(Milimetros=45,):
     else:
         for i in data:
             print(f'{i[2]} Litros')
+        conn.close()
     return data, r
 
 
@@ -29,6 +30,7 @@ def Verlista():
     else:
         for i in data:
             print(f'ID: {i[0]}, Milimetros: {i[1]} e {i[2]} Litros')
+        conn.close()
     return data, r
 
 
@@ -45,6 +47,7 @@ def adcionarTotalLeite(total_leite):
         print(f'Deu Algum erro!!!!! {error.__class__},{error.args}')
     else:
         print('Dados cadastrados com sucesso')
+        conn.close()
     return 
 
 def verdadosMes(mes):
@@ -62,6 +65,7 @@ def verdadosMes(mes):
             print(f'ID: {i[0]}, DATA: {i[1]}, HORARIO: {i[2]} e TOTAL: {i[3]} Litros')
             soma += i[3]
         print(f'Total da soma: {soma}')
+        conn.close()
     return data, r
 
 def verPreco(preco, mes):
@@ -85,6 +89,7 @@ def verPreco(preco, mes):
         
         print(f'Total da soma: {soma}')
         print(f'Preco do litro do leite {preco} * {soma} = R${tot} ')
+        conn.close()
     return data, r
     
     
