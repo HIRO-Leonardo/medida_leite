@@ -4,7 +4,7 @@ from datetime import date, datetime
 
 def conexaoBanco(Milimetros=45,):
     try:
-        conn = pymysql.connect(user='root', password='', host='localhost', database='leite')
+        conn = pymysql.connect(user='{user}', password='{password}', host='{host}', database='{dbname}')
         cursor = conn.cursor()
         query = f'select * from medida_leite where Milimetros = {Milimetros} ;'
         r = cursor.execute(query)
@@ -20,7 +20,7 @@ def conexaoBanco(Milimetros=45,):
 
 def Verlista():
     try:
-        conn = pymysql.connect(user='root', password='', host='localhost', database='leite')
+        conn = pymysql.connect(user='{user}', password='{password}', host='{host}', database='{dbname}')
         cursor = conn.cursor()
         query = f'select *from medida_leite ;'
         r = cursor.execute(query)
@@ -38,7 +38,7 @@ def adcionarTotalLeite(total_leite):
     try:
         horario = datetime.now()
         data_to = date.today()
-        conn = pymysql.connect(user='root', password='', host='localhost', database='leite')
+        conn = pymysql.connect(user='{user}', password='{password}', host='{host}', database='{dbname}')
         cursor = conn.cursor()
         query = f"insert into `total_leite` (data, horario, total_leite1)  values (%s, %s, %s);"
         cursor.execute(query, (data_to, horario, total_leite))
@@ -52,7 +52,7 @@ def adcionarTotalLeite(total_leite):
 
 def verdadosMes(mes):
     try:
-        conn = pymysql.connect(user='root', password='', host='localhost', database='leite')
+        conn = pymysql.connect(user='{user}', password='{password}', host='{host}', database='{dbname}')
         cursor = conn.cursor()
         query = f'SELECT * FROM total_leite WHERE month(data) = {mes};'
         r = cursor.execute(query)
@@ -70,7 +70,7 @@ def verdadosMes(mes):
 
 def verPreco(preco, mes):
     try:
-        conn = pymysql.connect(user='root', password='', host='localhost', database='leite')
+        conn = pymysql.connect(user='{user}', password='{password}', host='{host}', database='{dbname}')
         cursor = conn.cursor()
         query = f'SELECT * FROM total_leite WHERE month(data) = {mes};'
         r = cursor.execute(query)
