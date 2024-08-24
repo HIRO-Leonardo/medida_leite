@@ -9,7 +9,7 @@ from datetime import date, datetime
 
 def Verlista():
     try:
-        conn = pymysql.connect(user='root', password='', host='localhost', database='leite')
+        conn = pymysql.connect(user={user}, password={password}, host={host}, database={database})
         cursor = conn.cursor()
         query = f'select *from medida_leite ;'
         r = cursor.execute(query)
@@ -25,7 +25,7 @@ def adcionarTotalLeite(total_leite):
     try:
         horario = datetime.now()
         data_to = date.today()
-        conn = pymysql.connect(user='root', password='', host='localhost', database='leite')
+        conn = pymysql.connect(user={user}, password={password}, host={host}, database={database})
         cursor = conn.cursor()
         query = f"insert into `total_leite` (data, horario, total_leite1)  values (%s, %s, %s);"
         cursor.execute(query, (data_to, horario, total_leite))
@@ -38,7 +38,7 @@ def adcionarTotalLeite(total_leite):
 
 def verdadosMes(mes):
     try:
-        conn = pymysql.connect(user='root', password='', host='localhost', database='leite')
+        conn = pymysql.connect(user={user}, password={password}, host={host}, database={database})
         cursor = conn.cursor()
         query = f'SELECT * FROM total_leite WHERE month(data) = {mes};'
         r = cursor.execute(query)
@@ -55,7 +55,7 @@ def verdadosMes(mes):
 
 def verPreco(preco, mes):
     try:
-        conn = pymysql.connect(user='root', password='', host='localhost', database='leite')
+        conn = pymysql.connect(user={user}, password={password}, host={host}, database={database})
         cursor = conn.cursor()
         query = f'SELECT * FROM total_leite WHERE month(data) = {mes};'
         r = cursor.execute(query)
@@ -77,7 +77,7 @@ def exportarDatabase(mes, preco):
     try:
         data_to = date.today()
         arquivo = open(f"total_de_leite_do_mes_{mes}.txt", 'w+')
-        conn = pymysql.connect(user='root', password='', database='leite', host='localhost')
+        conn = pymysql.connect(user={user}, password={password}, host={host}, database={database})
         cursor = conn.cursor()
         query = f'SELECT * FROM total_leite WHERE month(data) = {mes};'
         r = cursor.execute(query)
