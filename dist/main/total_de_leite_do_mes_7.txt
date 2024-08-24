@@ -1,0 +1,12 @@
+ID:39, DATA:1, HORARIO: 10:34:32 e TOTAL: 55.0 Litros
+ID:40, DATA:1, HORARIO: 10:34:04 e TOTAL: 55.0 Litros
+ID:41, DATA:1, HORARIO: 9:26:10 e TOTAL: 57.0 Litros
+ID:42, DATA:1, HORARIO: 8:57:56 e TOTAL: 55.0 Litros
+ID:43, DATA:1, HORARIO: 9:05:07 e TOTAL: 54.0 Litros
+ID:44, DATA:1, HORARIO: 9:05:10 e TOTAL: 54.0 Litros
+ID:45, DATA:1, HORARIO: 9:35:07 e TOTAL: 53.0 Litros
+ID:46, DATA:1, HORARIO: 8:50:19 e TOTAL: 53.0 Litros
+Total do litros de leite no mes 7: 436.0.
+Valor do leite: R$2.20.
+valor do litro do leite e total do leite que foi produzido no mes 7: R$959.20.
+arquivo criado no dia 2024-07-31.

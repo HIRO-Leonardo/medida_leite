@@ -1,0 +1,10 @@
+ID:47, DATA:1, HORARIO: 13:04:30 e TOTAL: 50.0 Litros
+ID:48, DATA:1, HORARIO: 20:40:28 e TOTAL: 50.0 Litros
+ID:49, DATA:1, HORARIO: 10:03:14 e TOTAL: 47.0 Litros
+ID:50, DATA:1, HORARIO: 10:03:56 e TOTAL: 44.0 Litros
+ID:51, DATA:1, HORARIO: 12:26:36 e TOTAL: 100.0 Litros
+ID:52, DATA:1, HORARIO: 12:24:01 e TOTAL: 122.0 Litros
+Total do litros de leite no mes 8: 413.0.
+Valor do leite: R$2.20.
+valor do litro do leite e total do leite que foi produzido no mes 8: R$908.60.
+arquivo criado no dia 2024-08-24.
